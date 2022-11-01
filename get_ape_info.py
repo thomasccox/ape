@@ -38,7 +38,6 @@ def get_ape_info(apeID):
     for a in attributes:
         if a.get('trait_type') == 'Eyes':
             data.update({'eyes': a.get('value')})
-    print(data)
     assert isinstance(data, dict), f'get_ape_info{apeID} should return a dict'
     assert all([a in data.keys() for a in
                 ['owner', 'image', 'eyes']]), f"return value should include the keys 'owner','image' and 'eyes'"
